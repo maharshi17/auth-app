@@ -10,7 +10,14 @@ function App() {
     <div className='min-h-screen bg-gray-100'>
       <Routes>
         <Route path='/' element={<Navigate to='/login' />} />
-        <Route path='/signup' element={<Signup/>} />
+        <Route 
+          path='/signup' 
+          element={
+            <PublicRoute>
+              <Signup/>
+            </PublicRoute>
+          } 
+        />
         <Route 
           path='/login' 
           element={
